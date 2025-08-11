@@ -52,20 +52,14 @@ const cadastraTarefa = () => {
     estado.tarefas.push(tarefaNova);
     estado.tarefaTemp = '';
 }
-
-
 </script>
 
 <template>
     <div class="container">
-        <Cabecalho tarefas-pendentes="10" />
-        <Formulario />
-        <ListaDeTarefas />
+        <Cabecalho :tarefas-pendentes="getTarefasPendentes().length" />
+        <Formulario :trocar-filtro="evento=> estado.filtro = evento.target.value" :tarefa-temp="estado.tarefaTemp" :edita-tarefa-temp="evento=> estado.tarefaTemp = evento.target.value" :cadastra-tarefa="cadastraTarefa"/>
+        <ListaDeTarefas :tarefas="getTarefasFiltradas()" />
     </div>
 </template>
 
-<style scoped>
-.done {
-    text-decoration: line-through;
-}
-</style>
+
