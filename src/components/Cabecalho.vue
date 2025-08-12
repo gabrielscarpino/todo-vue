@@ -3,8 +3,8 @@
 </script>
 
 <template>
-    <header class="p-5 mb-4 mt-4 bg-light rounded-3">
-        <h1>Minhas tarefas</h1>
+    <header class="p-5 mb-4 mt-4 text-center bg-light rounded-3">
+        <h1>Lista de tarefas</h1>
         <p>
             Você possui {{ props.tarefasPendentes}} tarefas pendentes.
         </p>
