@@ -8,6 +8,6 @@
         <p v-if="props.tarefasPendentes > 0">
             Você possui {{ props.tarefasPendentes }} tarefas pendentes
         </p>
-        <p v-else>Você não tem tarefas pendentes!</p>
+        <p v-else>Você não tem tarefas pendentes.</p>
     </header>
 </template>
